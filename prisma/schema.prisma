@@ -13,3 +13,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Project {
+  id       Int      @id @default(autoincrement())
+  name     String
+  deadline DateTime
+  groups   Group[]
+  tasks    Task[]
+}
+
+model Group {
+  id        Int      @id @default(autoincrement())
+  name      String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId Int
+  tasks     Task[]
+}
+
+model Task {
+  id        Int      @id @default(autoincrement())
+  name      String
+  priority  Int
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId Int
+  group     Group?   @relation(fields: [groupId], references: [id])
+  groupId   Int?
+}
