@@ -12,6 +12,7 @@ Vytvoriť aplikáciu ktorá pomôže manažovať projekty rôznych typov. Vytvor
 - Filtrovanie & Hľadanie 
 - Zmena statusu Tásku
 - Notifikácie o priradení alebo zmene
+- Vytvorenie Template projektov kopírovanie a vytvorenie
 
 # 3. Technologický Stack 
 
