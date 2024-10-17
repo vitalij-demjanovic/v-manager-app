@@ -14,6 +14,8 @@ Vytvoriť aplikáciu ktorá pomôže manažovať projekty rôznych typov. Vytvor
 - Notifikácie o priradení alebo zmene
 - Vytvorenie Template projektov kopírovanie a vytvorenie
 
+- Vyskúšať Novel na editovanie textu
+
 # 3. Technologický Stack 
 
 Aplikácia bude vytvorená pomocou Frameworku Next.js ktorý sa bude používať ako Full-Stack Framework. 
