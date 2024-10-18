@@ -1,7 +1,12 @@
 import ProjectCard from '@/components/ProjectCard';
 import CreateProjectForm from '@/components/CreateProjectForm';
+import { getProjectsAction } from '@/lib/product/actions';
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getProjectsAction();
+
+  console.log(projects);
+
   return (
     <div className='py-10'>
       <div className='align-center mb-10 flex justify-between'>

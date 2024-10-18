@@ -1,6 +1,6 @@
 'use server';
 
-import { createProject } from '@/lib/product/project';
+import { createProject, getAllProjects } from '@/lib/product/project';
 
 export async function createProjectAction(data: FormData) {
   try {
@@ -12,4 +12,8 @@ export async function createProjectAction(data: FormData) {
   } catch (error) {
     console.error('Error creating project:', error);
   }
+}
+
+export async function getProjectsAction() {
+  return await getAllProjects();
 }
