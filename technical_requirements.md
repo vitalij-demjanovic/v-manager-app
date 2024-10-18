@@ -7,7 +7,7 @@ Vytvoriť aplikáciu ktorá pomôže manažovať projekty rôznych typov. Vytvor
 
 - Registrácia, autentifikácia a prihlásenie
 - Funkcionál vytvorenie projektu, tásku a skupiny táskov
-- Úprava projektu, tásku a skupinu 
+- Úprava projektu, tasku a skupinu 
 - Priradenie tásku danej osobe
 - Filtrovanie & Hľadanie 
 - Zmena statusu Tásku
@@ -15,6 +15,13 @@ Vytvoriť aplikáciu ktorá pomôže manažovať projekty rôznych typov. Vytvor
 - Vytvorenie Template projektov kopírovanie a vytvorenie
 
 - Vyskúšať Novel na editovanie textu
+
+# 2.1 Registrácia, autentifikácia a prihlásenie
+
+
+# 2.2 Projekt, task a skupina
+
+Na vytvorenie projektu použijem formulár. Formulár bude obsahovať názov projektu a dedline projektu. Vo vnútri projektu už budeme môcť vytvoriť skupinu táskov alebo samotný task. Task budem mocť vytvoriť aj na stránke Dashboard alebo Home. Task príma id projektu ku ktorému to priradíme. Skupina bude voliteľná. Doplnkové údaje sú priorita a progres tásku. Skupina slúži na to aby sme si vedeli tásky zorganizovať. Napríklad UI/UX Design Front-end Back-end a podobne. Na vytvorenie skupiny meno a id projektu.
 
 # 3. Technologický Stack 
 
