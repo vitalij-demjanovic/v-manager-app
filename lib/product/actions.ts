@@ -1,5 +1,4 @@
 'use server';
-
 import { createProject, getAllProjects } from '@/lib/product/project';
 
 export async function createProjectAction(data: FormData) {

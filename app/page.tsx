@@ -2,10 +2,10 @@ import ProjectCard from '@/components/ProjectCard';
 import CreateProjectForm from '@/components/CreateProjectForm';
 import { getProjectsAction } from '@/lib/product/actions';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const projects = await getProjectsAction();
-
-  console.log(projects);
 
   return (
     <div className='py-10'>
@@ -14,11 +14,14 @@ export default async function Home() {
         <CreateProjectForm />
       </div>
       <div className='grid grid-cols-4 gap-4'>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects &&
+          projects.map(project => (
+            <ProjectCard
+              key={project.id}
+              name={project.name}
+              deadline={project.deadline}
+            />
+          ))}
       </div>
     </div>
   );
