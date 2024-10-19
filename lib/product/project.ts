@@ -4,6 +4,7 @@ interface ProjectI {
   name: string;
   description?: string | null;
   deadline: Date;
+  slug: string;
 }
 
 export async function createProject(data: ProjectI) {
@@ -12,7 +13,8 @@ export async function createProject(data: ProjectI) {
       data: {
         name: data.name,
         deadline: data.deadline,
-        description: data.description
+        description: data.description,
+        slug: data.slug
       }
     });
     return { project };

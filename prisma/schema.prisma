@@ -14,12 +14,13 @@ datasource db {
 }
 
 model Project {
-  id       Int      @id @default(autoincrement())
-  name     String
+  id          Int      @id @default(autoincrement())
+  name        String
   description String?
-  deadline DateTime
-  groups   Group[]
-  tasks    Task[]
+  deadline    DateTime
+  slug        String   @unique
+  groups      Group[]
+  tasks       Task[]
 }
 
 model Group {
