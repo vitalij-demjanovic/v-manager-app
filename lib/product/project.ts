@@ -30,3 +30,9 @@ export async function createProject(data: ProjectI) {
 export async function getAllProjects() {
   return await prisma.project.findMany();
 }
+
+export async function getProjectBySlug(slug: string) {
+  return await prisma.project.findUnique({
+    where: { slug }
+  });
+}

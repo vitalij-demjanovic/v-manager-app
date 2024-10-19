@@ -1,5 +1,9 @@
 'use server';
-import { createProject, getAllProjects } from '@/lib/product/project';
+import {
+  createProject,
+  getAllProjects,
+  getProjectBySlug
+} from '@/lib/product/project';
 import { slugify } from '@/lib/slugify';
 
 export async function createProjectAction(data: FormData) {
@@ -18,4 +22,19 @@ export async function createProjectAction(data: FormData) {
 
 export async function getProjectsAction() {
   return await getAllProjects();
+}
+
+export async function getProjectAction(slug: string) {
+  try {
+    const project = await getProjectBySlug(slug);
+
+    if (!project) {
+      return { error: 'Project not exists' };
+    }
+
+    return project;
+  } catch (error) {
+    console.error('Error fetching project:', error);
+    return { error: 'Error fetching project project.' };
+  }
 }

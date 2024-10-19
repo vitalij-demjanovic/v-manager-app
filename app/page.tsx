@@ -1,6 +1,7 @@
 import ProjectCard from '@/components/ProjectCard';
 import CreateProjectForm from '@/components/CreateProjectForm';
 import { getProjectsAction } from '@/lib/product/actions';
+import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,11 +17,9 @@ export default async function Home() {
       <div className='grid grid-cols-4 gap-4'>
         {projects &&
           projects.map(project => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              deadline={project.deadline}
-            />
+            <Link key={project.id} href={`/project/${project.slug}`}>
+              <ProjectCard name={project.name} deadline={project.deadline} />
+            </Link>
           ))}
       </div>
     </div>
